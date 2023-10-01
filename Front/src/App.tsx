@@ -4,14 +4,15 @@ import {
   Route,
   RouterProvider
  } from 'react-router-dom'
-import './App.css'
-import Layout from './pages/Layout'
+import Layout from './common/Layout'
+import Home from './pages/Home'
+import "./App.css"
 
 function App() {
 
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
-
+        <Route index element={<Home />}></Route>
     </Route>
   ))
 
