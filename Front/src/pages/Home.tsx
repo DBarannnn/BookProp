@@ -65,6 +65,8 @@ export default function Home(){
 
                     </div>
 
+                    <hr className="home-separator"></hr>
+
             </div>
                 
             
