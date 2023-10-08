@@ -6,9 +6,8 @@ export default function Header(){
     return (
         <header className="app-header">
             <div className="links-container">
-                <NavLink to="/buy">Buy</NavLink>
-                <NavLink to="/rent">Rent</NavLink>
-                <NavLink to="/sell">Sell</NavLink>
+                <NavLink to="/properties">Explore properties</NavLink>
+                <NavLink to="/properties/place">Place property</NavLink>
             </div>
             
             <NavLink to="/" className="links-container">
