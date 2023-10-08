@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "08QIlcSi96Bh0YXiNHzVzARTG5T2IyNqhtez7WBuF7cx/V0yBxcCvX+hCeY2QHxvzcMoorDex2Wj7V1Abgq4yg==",
+  "dgSpecHash": "LyCQwJ29Mvv3A+r18tYVyfRSGbBpceVbjj30ZCNVKR/bp+v8IAchgNNi6jxcHDt/wtYPT3HqpgI1yNSIMylS+w==",
   "success": true,
   "projectFilePath": "C:\\Project\\BookProp\\Back\\Prop\\Prop.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\dimab\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.11\\microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
     "C:\\Users\\dimab\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.11\\microsoft.entityframeworkcore.analyzers.7.0.11.nupkg.sha512",
     "C:\\Users\\dimab\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.11\\microsoft.entityframeworkcore.design.7.0.11.nupkg.sha512",
+    "C:\\Users\\dimab\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\7.0.11\\microsoft.entityframeworkcore.inmemory.7.0.11.nupkg.sha512",
     "C:\\Users\\dimab\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.11\\microsoft.entityframeworkcore.relational.7.0.11.nupkg.sha512",
     "C:\\Users\\dimab\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.11\\microsoft.entityframeworkcore.sqlserver.7.0.11.nupkg.sha512",
     "C:\\Users\\dimab\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

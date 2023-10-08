@@ -74,3 +74,4 @@ C:\Project\BookProp\Back\Prop\obj\Debug\net7.0\refint\Prop.dll
 C:\Project\BookProp\Back\Prop\obj\Debug\net7.0\Prop.pdb
 C:\Project\BookProp\Back\Prop\obj\Debug\net7.0\Prop.genruntimeconfig.cache
 C:\Project\BookProp\Back\Prop\obj\Debug\net7.0\ref\Prop.dll
+C:\Project\BookProp\Back\Prop\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll

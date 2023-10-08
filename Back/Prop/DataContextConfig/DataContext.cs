@@ -5,23 +5,27 @@ namespace Prop.DataContextConfig
 {
     public class DataContext : DbContext
     {
-     
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Data Source=PC2\\SQLEXPRESS;Database=Property;Trusted_Connection=true;TrustServerCertificate=true");
-        }
 
+
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        {
+
+        }
+       
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>()
                 .HasMany(e => e.FavoriteProperties)
                 .WithMany(e => e.FavoriteUsers);
+
+            modelBuilder.Entity<User>()
+                .HasMany(e => e.Properties)
+                .WithOne(e => e.UserOwner);
                 
 
         }
 
-        public DbSet<Property> Properties { get; }
-        public DbSet<User> Users { get; }
+        public DbSet<Property> Properties { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
