@@ -7,7 +7,7 @@ export default function Header(){
         <header className="app-header">
             <div className="links-container">
                 <NavLink to="/properties">Explore properties</NavLink>
-                <NavLink to="/properties/place">Place property</NavLink>
+                <NavLink to="/place">Place property</NavLink>
             </div>
             
             <NavLink to="/" className="links-container">

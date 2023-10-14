@@ -1,0 +1,4 @@
+.place-form{
+    display: flex;
+    flex-direction: column;
+}

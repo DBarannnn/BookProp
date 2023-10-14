@@ -1,28 +1,49 @@
-import React, { useState } from "react";
-import {Form} from "react-router-dom"
-import "./Place.css" 
+import "./Place.css";
+import { Form, redirect } from "react-router-dom";
 
-// const [images, setImages] = useState([])  
+export async function action({ request }: { request: Request }) {
+  const formData = await request.formData()
+  console.log(formData)
+  const images = formData.getAll('images')
 
-export async function action({request} : {request: Request}){
-    console.log(await request.blob())
-    return "Hello"
+  return redirect(".")
+ 
 }
 
-export default function Place(){
+import React, { useState } from 'react';
+
+export default function Place() {
+  const [selectedImages, setSelectedImages] = useState<File[]>([]);
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files) {
+      const files = Array.from(e.target.files);
+      setSelectedImages(files);
+    }
+  };
+
+
+  return (
+
     
-    return (
-        <Form 
-        method="POST"
-        className="place-form"
-        replace
-        >
-            <input 
-            type="file" 
-            name="images"
-            placeholder="Upload your property images"
-            />
-        <button>Submit</button>
-        </Form>
-    )
+    <div>
+        <div className="image-preview">
+          {selectedImages.map((image, index) => (
+            <img key={index} src={URL.createObjectURL(image)} alt={`Image ${index}`} />
+          ))}
+        </div>
+
+      <Form method="post" encType="multipart/form-data" className="place-form">
+        <input
+          type="file"
+          accept="image/*"
+          name="images"
+          multiple
+          onChange={handleImageChange}
+        />
+        <button type="submit">Submit</button>
+      </Form>
+     
+    </div>
+  );
 }

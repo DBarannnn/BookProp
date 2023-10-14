@@ -6,10 +6,10 @@ import {
  } from 'react-router-dom'
 import Layout from './common/Layout'
 import Home from './pages/Home'
-import Place, {action as placeAction}from "./pages/Place"
+import Place, {action as placeAction} from "./pages/Place"
 import "./App.css"
 
-function App() {
+export default function App() {
 
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
@@ -18,9 +18,9 @@ function App() {
         <Route 
             path='place' 
             element={<Place />}
-            action={placeAction}>
+            action={placeAction}
+            >
         </Route>
-
     </Route>
     
   ))
@@ -30,4 +30,4 @@ function App() {
   )
 }
 
-export default App
+
