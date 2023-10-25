@@ -1,49 +1,48 @@
-import "./Place.css";
-import { Form, redirect } from "react-router-dom";
+import {Form} from "react-router-dom"
+import "./Place.css" 
 
-export async function action({ request }: { request: Request }) {
-  const formData = await request.formData()
-  console.log(formData)
-  const images = formData.getAll('images')
+// const [images, setImages] = useState([])  
 
-  return redirect(".")
- 
+export async function action({request} : {request: Request}){
+    const formData = await request.formData()
+    console.log(formData.getAll("images"))
+    return "Hello"
 }
 
-import React, { useState } from 'react';
-
-export default function Place() {
-  const [selectedImages, setSelectedImages] = useState<File[]>([]);
-
-  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      const files = Array.from(e.target.files);
-      setSelectedImages(files);
-    }
-  };
-
-
-  return (
-
+export default function Place(){
     
-    <div>
-        <div className="image-preview">
-          {selectedImages.map((image, index) => (
-            <img key={index} src={URL.createObjectURL(image)} alt={`Image ${index}`} />
-          ))}
-        </div>
+    return (
+        <Form 
+        method="POST"
+        className="place-form"
+        replace
+        >
+            <input 
+            type="file" 
+            name="images"
+            style={{display: "none"}}
+            id="fileInput"
+            multiple
+            />
+            <label htmlFor="fileInput" className="upload-btn">
+                <h2>Upload your photos</h2>
+                <img src="/src/assets/upload.svg" className="upload-img"/>
+            </label>
+            <input type="text" name="rooms" className="form-input" placeholder="Number of rooms"/>
+            <input type="text" name="price" className="form-input" placeholder="Price"/>
+            <input type="text" name="squares" className="form-input" placeholder="Squares"/>
+            <select name="propType" placeholder="Property type">
+                <option value="" disabled selected hidden>Property type</option>
+                <option value="flat">Flat</option>
+                <option value="house">House</option>
+            </select>
+            <select name="adType" placeholder="Property type">
+                <option value="" disabled selected hidden>Advertisement type</option>
+                <option value="flat">Flat</option>
+                <option value="house">House</option>
+            </select>
 
-      <Form method="post" encType="multipart/form-data" className="place-form">
-        <input
-          type="file"
-          accept="image/*"
-          name="images"
-          multiple
-          onChange={handleImageChange}
-        />
-        <button type="submit">Submit</button>
-      </Form>
-     
-    </div>
-  );
+        <button>Submit</button>
+        </Form>
+    )
 }

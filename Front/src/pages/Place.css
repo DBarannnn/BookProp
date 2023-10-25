@@ -1,4 +1,23 @@
 .place-form{
     display: flex;
     flex-direction: column;
+    padding: 50px;
+    border: 2px solid black;
+}
+
+.upload-btn{
+    width: 100%;
+    height: 200px;
+    border: 5px solid ghostwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-btn:hover{
+    cursor: pointer;
+}
+
+.upload-img{
+    height: 3rem;
 }
